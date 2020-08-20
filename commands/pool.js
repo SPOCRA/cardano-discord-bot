@@ -12,8 +12,8 @@ module.exports = {
   name: 'pool',
   description: 'Pool!',
   execute(msg, args) {
-    pool.query('SELECT NOW()', (err, res) => {
-      msg.reply(res);
+    pool.query('SELECT * from public.pool_owner', (err, res) => {
+      msg.reply("Got it");
       console.log(err, res)
       pool.end()
     })
