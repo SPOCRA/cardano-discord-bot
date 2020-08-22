@@ -44,10 +44,8 @@ module.exports = {
                   homepage: response.data.homepage
                 };
     
-                console.log(o.url);
-    
                 msg.reply(`Name: ${payload.name} | Ticker: ${payload.ticker} | Pledge: ${payload.pledge} | Margin: ${payload.margin}% | Fixed Cost: ${payload.fixedCost} | Homepage: ${payload.homepage}`);
-                console.log(o);
+                
               })
               .catch(function (error) {
                 // handle error
