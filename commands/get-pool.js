@@ -31,7 +31,7 @@ module.exports = {
       pool.query(sql, [poolId], (err, res) => {
           res.rows.forEach((o) => {
 
-            axios.get('/user?ID=12345')
+            axios.get(o.url)
               .then(function (response) {
                 console.log(response);
                 let payload = {
