@@ -37,12 +37,16 @@ module.exports = {
                 let payload = {
                   pledge: o.pledge/1000000,
                   margin: (o.margin * 100).toFixed(2),
-                  fixedCost: o.fixed_cost/1000000
+                  fixedCost: o.fixed_cost/1000000,
+                  name: response.data.name,
+                  description: response.data.description,
+                  ticker: response.data.ticker,
+                  website: response.data.homepage
                 };
     
                 console.log(o.url);
     
-                msg.reply(`Pledge: ${payload.pledge} | Margin: ${payload.margin}% | Fixed Cost: ${payload.fixedCost}`);
+                msg.reply(`Name: ${payload.name} | Ticker: ${payload.ticker} | Pledge: ${payload.pledge} | Margin: ${payload.margin}% | Fixed Cost: ${payload.fixedCost} | Homepage: ${payload.homepage}`);
                 console.log(o);
               })
               .catch(function (error) {
