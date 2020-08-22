@@ -41,7 +41,7 @@ module.exports = {
                   name: response.data.name,
                   description: response.data.description,
                   ticker: response.data.ticker,
-                  website: response.data.homepage
+                  homepage: response.data.homepage
                 };
     
                 console.log(o.url);
